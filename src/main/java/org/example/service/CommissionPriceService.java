@@ -8,14 +8,14 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-public class MessageService implements PriceService{
+public class CommissionPriceService implements PriceService{
 
     private final PriceRepository priceRepository;
 
     private final static BigDecimal bidCommission = BigDecimal.valueOf(0.001);
     private final static BigDecimal askCommission = BigDecimal.valueOf(0.001);
 
-    public MessageService(PriceRepository priceRepository) {
+    public CommissionPriceService(PriceRepository priceRepository) {
         this.priceRepository = priceRepository;
     }
 
